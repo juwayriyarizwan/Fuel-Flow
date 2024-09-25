@@ -1,0 +1,77 @@
+<style>
+ body {
+            background-color: #f3f3f3;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        h3 {
+            font-weight: 300;
+            font-size: 36px;
+            letter-spacing: 0.5px;
+            margin-bottom: 40px;
+            color: #1d1d1f;
+        }
+
+        a {
+            display: block;
+            background-color: #0070c9;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #005fb3;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        button[type="submit"] {
+            background-color: #1d1d1f;
+            color: #fff;
+            font-weight: 500;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #555;
+        }
+</style>
+    
+<h3>Main Page</h3>
+<div class="stuff">
+    <!-- This script just handles to see if theß user has a profile for the websiste
+    if they do they have acces to the form and the fomr history if they dont then they 
+    have to fill out the profile page first -->
+    <% if(user==false) { %>
+            <p>('Please fill out Profile information before continuing to the form')</p>
+        <a href="/profmgmt">Profile Management</html>
+    <%}else{%>
+        <a href="/profmgmt">Profile Management</html>
+        <a href="/quoteform">Quote Form</html>
+        <a href="/quotehist">Quote History</html>
+        <%}%>
+</body>
+</div>
+<form action="/logout" method="POST">
+    <button type="submit">Log Out</button>
+  </form>
